@@ -33,12 +33,12 @@ def main():
     key = int(input())
     print("")
 
-    Chipher_text_list = []
+    Cipher_text_list = []
     for Plain_text in Plain_text_list:
-        Chipher_text_list.append(Enc(Plain_text, key))
+        Cipher_text_list.append(Enc(Plain_text, key))
         
     print("Chiper text")
-    print(" ".join(Chipher_text_list))
+    print(" ".join(Cipher_text_list))
     
 
 if __name__ == "__main__":
