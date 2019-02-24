@@ -1,6 +1,6 @@
 def Dec(c, n):
     """input
-        c : chiper text 
+        c : cipher text 
         type char
 
         n : key 1 ~ 25
@@ -25,8 +25,8 @@ def Dec(c, n):
 
 
 def main():
-    print("input chiper text (Alpahbet)")
-    Chiper_text_list = list(input().split())
+    print("input cipher text (Alpahbet)")
+    Cipher_text_list = list(input().split())
     print("")
 
     print("input key")
@@ -34,8 +34,8 @@ def main():
     print("")
 
     Plain_text_list = []
-    for Chiper_text in Chiper_text_list:
-        Plain_text_list.append(Dec(Chiper_text, key))
+    for Cipher_text in Cipher_text_list:
+        Plain_text_list.append(Dec(Cipher_text, key))
         
     print("Plain text")
     print(" ".join(Plain_text_list))
