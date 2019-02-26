@@ -1,11 +1,11 @@
-Ceasar-cipher
+# Caesar-cipher
 ====
 
 ## Overview
-Ceasar-cipher
+This repository has Caesar-sipher to be programmed with Python3.
 
 ## Description
-- Keygen.py:
+- keygen.py:
     - output:  
     key (n  <- {1, 2, ... 25})
 
@@ -24,6 +24,5 @@ Ceasar-cipher
     plain text
 
 ## Requirement
-python(>=3.5)
-
+Python version (>=3.5)
 
