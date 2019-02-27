@@ -3,6 +3,7 @@
 
 using namespace std;
 
+const int mod = 26;  // number of alphabet
 
 string decode(string text, int key) {
     // --- parameters ---
@@ -10,11 +11,17 @@ string decode(string text, int key) {
     // key : times of shift
 
     for (int i = 0; i < text.size(); i++) {
-        if (text[i] >= 'a' and text[i] <= 'z'){
-            text[i] = char((text[i] - 'a' +(26- key)) % 26 + 'a');
+        int diff;
+        int shift;
+        if ('a' <= text[i] and text[i] <= 'z') {
+            diff = text[i] - 'a';
+            shift = (diff + (mod - key)) % mod;
+            text[i] = 'a' + shift;
         }
-        else if (text[i] >= 'A' and text[i] <= 'Z'){
-            text[i] = char((text[i] - 'A' +(26- key)) % 26 + 'A');
+        else if ('A' <= text[i] and text[i] <= 'Z') {
+            diff = text[i] - 'A';
+            shift = (diff + (mod - key)) % mod;
+            text[i] = 'A' + shift;
         }
         else {
             text[i];
@@ -23,7 +30,6 @@ string decode(string text, int key) {
 
     return text;
 }
-
 
 
 int main() {
