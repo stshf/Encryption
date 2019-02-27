@@ -2,6 +2,8 @@
 #include <string>
 using namespace std;
 
+const int mod = 26;  // number of alphabet
+
 
 string encode(string text, int key) {
     // --- parameters ---
@@ -9,20 +11,24 @@ string encode(string text, int key) {
     // key : times of shift
 
     for (int i = 0; i < text.size(); i++) {
-            if (text[i] <= 'z' && text[i] >= 'a') {
-                text[i] = char((text[i] - 'a' + key) % 26 + 'a');
-            }
-            else if (text[i] <= 'Z' && text[i] >= 'A') {
-                text[i] = char((text[i] - 'A' + key) % 26 + 'A');
-            }
-            else {
-                text[i];
-            }
+        int diff;
+        int shift;
+        if ('a' <= text[i] and text[i] <= 'z') {
+            diff = text[i] - 'a';
+            shift = (diff + key) % mod;
+            text[i] = 'a' + shift;
         }
+        else if ('A' <= text[i] and text[i] <= 'Z') {
+            shift = (diff + key) % mod;
+            text[i] = 'A' + shift;
+        }
+        else {
+            text[i];
+        }
+    }
 
     return text;
 }
-
 
 
 int main() {
