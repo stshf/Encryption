@@ -1,6 +1,5 @@
 #include <iostream>
 #include <string>
-#include <typeinfo>
 using namespace std;
 
 
@@ -17,7 +16,7 @@ string encode(string text, int key) {
                 text[i] = char((text[i] - 'A' + key) % 26 + 'A');
             }
             else {
-                text[i]++;
+                text[i];
             }
         }
 
