@@ -38,10 +38,10 @@ int main() {
     int key;
     cout << "Choose the key (1 ~ 25): ";
     cin >> key;
-
+    cin.ignore();
     string text;
     cout << "Encrypted text: ";
-    cin >> text;
+    getline(cin, text);
 
     cout << decode(text, key) << endl;
 
