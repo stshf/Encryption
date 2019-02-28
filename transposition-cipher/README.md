@@ -1,4 +1,4 @@
-# Scytale Cipher
+# Transposition Cipher
 ## Requirements
 * Python 3 version 3.5
 * Apple LLVM version 10.0.0
