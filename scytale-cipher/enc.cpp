@@ -15,11 +15,15 @@ int main() {
     int key;
     cout << "Input key: ";
     cin >> key;
+    cin.ignore();
 
     string text;
     cout << "Input plain text: ";
-    cin >> text;
-
+    getline(cin, text);
+    text.erase(remove(text.begin(), text.end(), ' '), text.end());
+    cout << text << "\n";
+    string cipher = encode(key, text);
+    cout << cipher << "\n";
     return 0;
 }
 
@@ -35,7 +39,24 @@ char random_alphabet() {
 
 
 string encode(int key, string text) {
-    int n = (key + text.size() - 1) / key;
+    
+    int text_length = text.size();
+    int reminder = text_length % key;
+    int quotient = text_length / key;
+    if (reminder != 0) {
+        quotient++;
+        for (int i=0; i<(key - reminder); i++) {
+            text += random_alphabet();
+        }
+    }
+    
+    string cipher;
+    for (int i=0;i<key; i++) {
+        for (int j=0; j<quotient; j++){
+            cipher += text[j*key + i];
+        }
+    }
 
-    return sample;
+    return cipher;
 }
+
