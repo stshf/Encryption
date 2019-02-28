@@ -9,6 +9,7 @@ On your console:
 ```sh
 $python3 keygen.py
 ```
+Input split number (int)
 ```sh
 $ python3 enc.py
 ```
