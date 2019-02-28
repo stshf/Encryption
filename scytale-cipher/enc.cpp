@@ -20,10 +20,14 @@ int main() {
     string text;
     cout << "Input plain text: ";
     getline(cin, text);
+
+    // remove white space
     text.erase(remove(text.begin(), text.end(), ' '), text.end());
-    cout << text << "\n";
-    string cipher = encode(key, text);
-    cout << cipher << "\n";
+
+    cout << endl;
+    cout << "Plain text  :" << text << endl;
+    cout << "Encoded text: " << encode(key, text) << endl;
+
     return 0;
 }
 
@@ -39,21 +43,20 @@ char random_alphabet() {
 
 
 string encode(int key, string text) {
-    
-    int text_length = text.size();
-    int reminder = text_length % key;
-    int quotient = text_length / key;
-    if (reminder != 0) {
-        quotient++;
-        for (int i=0; i<(key - reminder); i++) {
+    int r = text.size() % key;  // remainder
+    int q = text.size() / key;  // quotient
+    if (r) {
+        q++;
+        for (int i = 0; i < key - r; i++) {
             text += random_alphabet();
         }
     }
-    
+
     string cipher;
-    for (int i=0;i<key; i++) {
-        for (int j=0; j<quotient; j++){
-            cipher += text[j*key + i];
+    for (int i = 0; i < key; i++) {
+        for (int j = 0; j < q; j++){
+            int idx = j * key + i;
+            cipher += text[idx];
         }
     }
 
