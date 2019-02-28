@@ -29,10 +29,10 @@ def enc(text, key):
 def main():
 
     key = int(input("input number(int)\n"))
-    Text = input("input plain text\n")
+    text = input("input plain text\n")
 
     
-    print(enc(Text, key))
+    print(enc(text, key))
     
 
 if __name__ == "__main__":
