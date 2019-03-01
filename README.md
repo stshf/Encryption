@@ -1,6 +1,6 @@
 # Classical-cipher
 ## Overview
-This repository has Classical-sipher to be programmed with Python3 and C++.
+This repository has Classical-cipher to be programmed with Python3 and C++.
 
 ## Cryptgraphy
 * [caesar](https://github.com/stshf/classical-cipher/tree/master/caeser-cipher)
