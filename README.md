@@ -10,4 +10,4 @@ This repository has Classical-cipher to be programmed with Python3 and C++.
 * [vigenere](https://github.com/stshf/classical-cipher/tree/master/vigenere-cipher)
 
 ## Reference
-* IPUSIRON, \rm(暗号技術のすべて)
+* IPUSIRON, "暗号技術のすべて", 翔泳社, 2018.
