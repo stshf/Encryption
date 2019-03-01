@@ -1,4 +1,4 @@
-# vernam cipher
+# Vernam cipher
 ## Requirements
 * Python 3 version 3.5
 
