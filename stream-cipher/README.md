@@ -2,7 +2,7 @@
 ## Descryition
 共通鍵暗号方式の１種．  
 平文をbitもしくはbyte単位で暗号化を行う方式．  
-
+RC4を採用．
 - 暗号化
 秘密鍵をシードとして擬似乱数系列に入力．  
 任意長の擬似乱数系列（キーストリーム）Zを生成．  
@@ -14,23 +14,15 @@ P xor Z = C
 平文Pを出力．  
 C xor Z = P xor Z xor Z = P  
 
-* 擬似乱数生成アルゴリズム
-    * j
 ## Requirements
 * Python 3 version 3.5
 ## Usage
 ### Python 3
-On your console:
 ```sh
-$ python3 enc.py
+$ python3 stream.py
 ```
-Input plain text.
-Return ciphertext and key
-
-```sh
-$ python3 dec.py
-```
-Input ciphertext and key.
+Input key and plain/cipher text.
+Return key and plain/cipher text.
 
 ## Reference
 M. MORII, R. TERAMURA, "ストリーム暗号の現状と課題", (https://www.jstage.jst.go.jp/article/essfr/2/3/2_3_3_66/_pdf).
