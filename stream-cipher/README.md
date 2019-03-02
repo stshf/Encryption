@@ -33,7 +33,4 @@ $ python3 dec.py
 Input ciphertext and key.
 
 ## Reference
-M. MORII, R. TERAMURA, "ストリーム暗号の現状と課題", (https://www.jstage.jst.go.jp/article/essfr/2/3/2_3_3_66_pdf).
-
-
-
+M. MORII, R. TERAMURA, "ストリーム暗号の現状と課題", (https://www.jstage.jst.go.jp/article/essfr/2/3/2_3_3_66/_pdf).
