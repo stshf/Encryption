@@ -1,14 +1,11 @@
 def Dec(c, n):
-    """input
-        c : cipher text 
-        type char
+    """
+    === input ===
+    c(string) : cipher text
+    n(itn)    : key (1~25)
 
-        n : key 1 ~ 25
-        type int
-        
-        output
-        m : plain text
-        type char
+    === return ===
+    m(string) : plain text
     """
     m = ""
     for c_ in c:
@@ -36,10 +33,8 @@ def main():
     Plain_text_list = []
     for Cipher_text in Cipher_text_list:
         Plain_text_list.append(Dec(Cipher_text, key))
-        
     print("Plain text")
     print(" ".join(Plain_text_list))
-    
 
 if __name__ == "__main__":
     main()

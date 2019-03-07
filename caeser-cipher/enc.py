@@ -1,14 +1,10 @@
 def Enc(m, n):
-    """input
-        m : plain text 
-        type char
-
-        n : key 1 ~ 25
-        type int
-        
-        output
-        c : cipher text
-        type char
+    """
+    === input ===
+    m(string): plain text
+    n(int) : key to shift (1 ~ 25)
+    === return ===
+    c(string): cipher text
     """
     c = ""
     for m_ in m:
@@ -36,10 +32,8 @@ def main():
     Cipher_text_list = []
     for Plain_text in Plain_text_list:
         Cipher_text_list.append(Enc(Plain_text, key))
-        
     print("Chiper text")
     print(" ".join(Cipher_text_list))
-    
 
 if __name__ == "__main__":
     main()
