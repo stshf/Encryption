@@ -1,6 +1,6 @@
-# DES
+# Data Encryption Standard (DES)
 ## Descryition
-Data Encryption Standard
+Data Encryption Standard. 
 A kind of Block encryption.
 
 ## Requirements
