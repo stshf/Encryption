@@ -6,9 +6,14 @@ using namespace std;
 const int mod = 26;  // number of alphabet
 
 string decode(string text, int key) {
-    // --- parameters ---
-    // text: encrypted text
-    // key : times of shift
+    /*
+    === parameters ===
+    text(stirng): encrypted text
+    key(int)    : key to shift (1 ~ 25)
+
+    === return ===
+    text(string): plain text
+    */
 
     for (int i = 0; i < text.size(); i++) {
         int diff;
