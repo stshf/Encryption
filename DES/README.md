@@ -8,9 +8,12 @@ A kind of Block encryption.
 ## Usage
 ### Python 3
 ```sh
-$ python3 stream.py
+$ python3 enc.py
 ```
-Input key and plain/cipher text.
-Return key and plain/cipher text.
-
-## Reference
+Input plaintext.
+Return secret key and ciphertext.
+```sh
+$ python3 dec.py
+```
+Input secret key and ciphertext.
+Return plaintext.
