@@ -124,7 +124,7 @@ def right_shift(binary_list, i):
     ---output---
     shifted_list(array)
     """
-    shift_number = [0, 1, 1, 2, 2, 2, 2, 2, 2, 1,
+    shift_number = [0, 0, 1, 2, 2, 2, 2, 2, 2, 1,
             2, 2, 2, 2, 2, 2, 1]
     j = shift_number[i]
     
@@ -183,7 +183,7 @@ def sub_keygen_dec(key):
         sub_key_list.append(k_i)
         Ci_1, Di_1 = Ci, Di
         i += 1
-    return sub_key_list
+    return sub_key_list[::-1]
 
 
 def f(x, kn):
