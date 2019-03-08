@@ -39,17 +39,14 @@ char random_alphabet() {
 
 
 string encode(int key, string text) {
-    
     int text_length = text.size();
     int quotient = text_length / key;
-    
     string plain_text;
     for (int i=0;i<quotient; i++) {
         for (int j=0; j<key; j++){
             plain_text += text[j*quotient + i];
         }
     }
-    
     return plain_text;
 }
 
