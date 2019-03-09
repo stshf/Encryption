@@ -8,9 +8,7 @@ def main():
     print("---input plaintext---")
     plaintext = input()
     len_plaintext = len(plaintext)
-    print(len_plaintext)
     plaintext += ' ' * (8 - len_plaintext // 8)
-    print(plaintext)
     plaintext_ascii = [ord(i) for i in plaintext]
     # keygen
     sub_key_list = func.sub_keygen_enc()
