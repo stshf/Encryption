@@ -13,7 +13,7 @@ def main():
     # dec
     plaintext_binary = []
     for i in range(0, len_ciphertext, 64):
-        plaintext_binary.append(func.crypto(ciphertext[i:i+64], sub_key_list))
+        plaintext_binary.append(func.des(ciphertext[i:i+64], sub_key_list))
     
     # output
     print("---plaintext---")

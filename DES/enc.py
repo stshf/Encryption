@@ -16,7 +16,7 @@ def main():
     plaintext_binary = func.encode(plaintext_ascii)
     ciphertext = []
     for i in range(0, 64*-(-len_plaintext //8), 64):
-        ciphertext.append(func.crypto(plaintext_binary[i:i+64], sub_key_list))
+        ciphertext.append(func.des(plaintext_binary[i:i+64], sub_key_list))
 
     # output
     print("---ciphertext---")

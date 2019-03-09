@@ -347,7 +347,7 @@ def IP_inv(x):
 
     return np.array([x[i-1] for i in IP_inv])
 
-def crypto(m, sub_key_list):
+def des(m, sub_key_list):
     """
     encryption / decryption phase
 

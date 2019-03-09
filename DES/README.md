@@ -1,7 +1,7 @@
 # Data Encryption Standard (DES)
 ## Descryition
 Data Encryption Standard. 
-A kind of Block encryption.
+A kind of Block cipher.
 
 ## Requirements
 * Python 3 version 3.5
