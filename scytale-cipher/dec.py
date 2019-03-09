@@ -1,5 +1,5 @@
 def dec(cipher, key):
-    # decode scytale cipher
+    # decryption scytale cipher
     cipher_list = [c for c in cipher]
 
     len_text = len(cipher_list)
