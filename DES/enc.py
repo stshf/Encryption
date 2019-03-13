@@ -8,7 +8,8 @@ def main():
     print("---input plaintext---")
     plaintext = input()
     len_plaintext = len(plaintext)
-    plaintext += ' ' * (8 - len_plaintext // 8)
+    # ZeroBytePadding \0 <=> Null
+    plaintext += '\0' * (8 - len_plaintext // 8)
     plaintext_ascii = [ord(i) for i in plaintext]
     # keygen
     sub_key_list = func.sub_keygen_enc()
