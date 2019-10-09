@@ -1,14 +1,17 @@
 import random
 
 def random_alphabet():
-    """return random an alphabet in lower cases"""
+    """
+    === return ===
+    random alphabet in lower cases
+    """
 
     alphabet_list = [chr(i + ord('a')) for i in range(26)]
     return random.choice(alphabet_list)
 
 
 def enc(text, key):
-    """ Encrypts a 'text' using the scytale cipher with specified key """
+    # scytale encryption
     text_list = [c for c in text]
 
     len_text = len(text_list)
@@ -22,18 +25,13 @@ def enc(text, key):
     for i in range(key):
         for j in range(quotient_key):
             cipher += text_list[key*j + i]
-    
     return cipher
 
 
 def main():
-
     key = int(input("input number(int)\n"))
     text = input("input plain text\n")
-
-    
     print(enc(text, key))
-    
 
 if __name__ == "__main__":
     main()

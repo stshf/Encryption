@@ -6,9 +6,14 @@ const int mod = 26;  // number of alphabet
 
 
 string encode(string text, int key) {
-    // --- parameters ---
-    // text: Plain text
-    // key : times of shift
+    /*
+    === parameters ===
+    text(stirng): plain text
+    key(int)    : key to shift
+
+    === return ===
+    text(string): cipher text
+    */
 
     for (int i = 0; i < text.size(); i++) {
         int diff;
@@ -32,7 +37,7 @@ string encode(string text, int key) {
 
 
 int main() {
-    cout << "--- caeser cipher ---" << endl;
+    cout << "=== caeser cipher ===" << endl;
     int key;
     cout << "Choose the key (1 ~ 25): ";
     cin  >> key;
